@@ -14,7 +14,7 @@ X = df.iloc[:,:4]
 Y = df.iloc[:,4:]
 
 x_train, x_test, y_train, y_test = train_test_split(X,Y,test_size=0.2,random_state=24)
-
+print(x_train.head())
 #prediction_space = np.linspace(min(x_test), max(x_test))
 
 
@@ -33,8 +33,8 @@ print("Prediction: {}".format(prediction))
 print(regg.score(x_test,y_test))
 print(ridge.score(x_test,y_test))
 
-plt.plot(x_train,y_train,color='black')
-plt.show()
+plt.plot(x_train,y_train,color='blue')
+#plt.show()
 
 print("R^2: {}".format(regg.score(x_test, y_test)))
 rmse = np.sqrt(mean_squared_error(y_test,prediction))
@@ -45,7 +45,7 @@ print(cv_scores)
 print("Average 5-Fold CV Score: {}".format(np.mean(cv_scores)))
 
 
-##############Lasso Model###########
+##############Lasso Model#############
 lasso = Lasso(alpha=0.4,normalize=True)
 lasso.fit(X,Y)
 lasso_coef = lasso.coef_
