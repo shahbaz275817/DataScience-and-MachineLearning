@@ -18,7 +18,7 @@ x = df.iloc[:,1:5].values
 y = df.iloc[:,6:].values
 
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,stratify=y,random_state=42)
-knn = KNeighborsClassifier(n_neighbors=6)
+knn = KNeighborsClassifier(n_neighbors=4)
 #knn = LogisticRegression()
 knn.fit(x_train,y_train)
 

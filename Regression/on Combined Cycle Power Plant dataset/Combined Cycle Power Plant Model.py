@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import ElasticNet
 from sklearn.linear_model import Lasso
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import train_test_split
@@ -14,11 +15,11 @@ X = df.iloc[:,:4]
 Y = df.iloc[:,4:]
 
 x_train, x_test, y_train, y_test = train_test_split(X,Y,test_size=0.2,random_state=24)
-print(x_train.head())
 #prediction_space = np.linspace(min(x_test), max(x_test))
 
 
 regg = LinearRegression()
+#regg = ElasticNet()
 regg.fit(x_train,y_train)
 
 ridge = Ridge(alpha=0.1,normalize=True)
