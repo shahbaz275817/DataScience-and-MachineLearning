@@ -10,7 +10,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import cross_val_score
 
 df = pd.read_excel('Folds5x2_pp.xlsx')
-
+print(df.head())
 X = df.iloc[:,:4]
 Y = df.iloc[:,4:]
 
@@ -34,8 +34,10 @@ print("Prediction: {}".format(prediction))
 print(regg.score(x_test,y_test))
 print(ridge.score(x_test,y_test))
 
-plt.plot(x_train,y_train,color='blue')
-#plt.show()
+m, b = np.polyfit(x_train['AT'],y_train['PE'],deg=1)
+plt.plot(x_train['AT'],m*x_train['AT']+b)
+plt.scatter(x_train['AT'],y_train['PE'],color='black',s=1)
+plt.show()
 
 print("R^2: {}".format(regg.score(x_test, y_test)))
 rmse = np.sqrt(mean_squared_error(y_test,prediction))

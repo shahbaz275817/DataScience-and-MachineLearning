@@ -17,6 +17,9 @@ df['target'] = df['Species'].map(target_dict)
 x = df.iloc[:,1:5].values
 y = df.iloc[:,6:].values
 
+# dummies=pd.get_dummies(df,drop_first=True)
+# print(dummies)
+
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,stratify=y,random_state=42)
 knn = KNeighborsClassifier(n_neighbors=4)
 #knn = LogisticRegression()
