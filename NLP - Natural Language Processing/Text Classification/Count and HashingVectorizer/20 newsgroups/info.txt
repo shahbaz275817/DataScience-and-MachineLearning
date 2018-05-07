@@ -1,0 +1,7 @@
+My aim is to classify news articles in various categories by supervised learning on labled dataset
+
+The dataset train.txt and test.txt are of this format
+        Label    {tab}           Data  {\n}
+the label and data is seperated by a tab and every record by a new line
+
+The various categories are show in info.png
