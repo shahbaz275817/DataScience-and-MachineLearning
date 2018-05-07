@@ -16,7 +16,6 @@ df['target'] = df['Species'].map(target_dict)
 
 x = df.iloc[:,1:5].values
 y = df.iloc[:,6:].values
-
 # dummies=pd.get_dummies(df,drop_first=True)
 # print(dummies)
 
