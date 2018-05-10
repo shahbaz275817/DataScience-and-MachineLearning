@@ -21,18 +21,16 @@ X_test = test.iloc[:,1:]
 y_test = test.iloc[:,0:1]
 
 
-
-TOKENS_ALPHANUMERIC = '[A-Za-z0-9]+(?=\\s+)'
+TOKENS_ALPHANUMERIC = '[A-Za-z]+(?=\\s+)'
 
 steps = [('vectorizer',HashingVectorizer(token_pattern = TOKENS_ALPHANUMERIC,
-                                                     norm=None, binary=False, lowercase=False,
-                                                     ngram_range=(1,2))),
-         ('scale', MaxAbsScaler()),
-         ('clf', OneVsRestClassifier(LogisticRegression()))]
+                                                    norm=None, binary=False, lowercase=False,
+                                                    ngram_range=(1,2))),
+        ('scale', MaxAbsScaler()),
+        ('clf', OneVsRestClassifier(LogisticRegression()))]
 
 pipeline = Pipeline(steps)
 pipeline.fit(X_train,y_train)
 accuracy = pipeline.score(X_test,y_test)
 print(accuracy)
-
 
