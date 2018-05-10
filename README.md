@@ -1,4 +1,4 @@
-# DataScience and MachineLearning
+# Data Science and Machine Learning
 Basic machine learning models and datasets
 
 #Projects updated till now
