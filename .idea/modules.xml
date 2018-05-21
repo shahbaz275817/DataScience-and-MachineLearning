@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Automated Resume Processing/.idea/Automated Resume Processing.iml" filepath="$PROJECT_DIR$/../Automated Resume Processing/.idea/Automated Resume Processing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DataScience.iml" filepath="$PROJECT_DIR$/.idea/DataScience.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Compressed/MLRP-master/MLRP-master/.idea/MLRP.iml" filepath="$USER_HOME$/Downloads/Compressed/MLRP-master/MLRP-master/.idea/MLRP.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Compressed/MiningResume-master/MiningResume-master/.idea/code.iml" filepath="$USER_HOME$/Downloads/Compressed/MiningResume-master/MiningResume-master/.idea/code.iml" />
     </modules>
   </component>
 </project>

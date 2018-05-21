@@ -10,4 +10,4 @@ Basic machine learning models and datasets
 5. Predicting annual income of a person using Support Vector Classification
 6. Unsupervised Learning using KMeans algorithm on 3D Road n/w dataset
 7. NLP:Natural Language Processing- classification of 20 news groups from news articles (Text Classification)
-
+8. Deep Learning: Handwriting recognition(Image classification) on  MNIST dataset using Keras
