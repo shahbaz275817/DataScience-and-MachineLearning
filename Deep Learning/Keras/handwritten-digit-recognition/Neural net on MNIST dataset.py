@@ -48,4 +48,3 @@ early_stopping_monitor = EarlyStopping(patience=3)
 model.fit(X_train,y_train,validation_data=(X_test, y_test), epochs=20, verbose=True, callbacks=[early_stopping_monitor])
 scores = model.evaluate(X_test,y_test,verbose=0)
 print("Baseline Error: %.2f%%" % (100-scores[1]*100))
-
