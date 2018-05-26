@@ -8,6 +8,7 @@ from keras import backend as K
 
 print(K.image_data_format())
 
+# Thanks @tylerneylon (https://gist.github.com/tylerneylon/ce60e8a06e7506ac45788443f7269e40)
 def read_idx(filename):
     with open(filename, 'rb') as f:
         zero, data_type, dims = struct.unpack('>HBB', f.read(4))
@@ -29,7 +30,7 @@ pixel_dimension = 1  # 3 in case of RGB & 1 for gray scale images
 X_train = X_train.reshape(X_train.shape[0], num_pixels).astype('float32')
 X_test = X_test.reshape(X_test.shape[0], num_pixels).astype('float32')
 
-# Normalize the pixels between 0 and 1
+# Normalize the pixels between 0 and 1 (Feature Scaling)
 X_train = X_train/255
 X_test = X_test/255
 

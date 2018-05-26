@@ -8,6 +8,7 @@ from scipy.cluster.hierarchy import linkage, dendrogram
 from sklearn.manifold import TSNE
 
 df = pd.read_csv('3D_spatial_network.txt')
+X = df.values
 
 ks = range(1, 6)
 inertias = []
@@ -46,7 +47,7 @@ labels = pipeline.predict(df)
 plt.scatter(labels,df.iloc[:,0],c=labels,alpha=0.5,s=1)
 plt.show()
 
-mergings =  linkage(df,method='complete')
+mergings = linkage(df,method='complete')
 dendrogram(mergings,
            labels=labels,
            leaf_rotation=90,
@@ -78,22 +79,28 @@ plt.show()
 # print(pd.crosstab(df_labels['labels'],df_labels['category']))
 
 
-# # Assign the columns of new_points: xs and ys
-# xs = df.iloc[:,0]
-# ys = df.iloc[:,1]
-#
-# # Make a scatter plot of xs and ys, using labels to define the colors
-# plt.scatter(xs,ys,c=labels,alpha=0.5,s=5)
-#
-# # Assign the cluster centers: centroids
-# centroids = kmeans.cluster_centers_
-#
-# # Assign the columns of centroids: centroids_x, centroids_y
-# centroids_x = centroids[:,0]
-# centroids_y = centroids[:,1]
-#
-# # Make a scatter plot of centroids_x and centroids_y
-# plt.scatter(centroids_x,centroids_y,marker='D',s=25)
-# plt.show()
-#
+# Assign the columns of new_points: xs and ys
+xs = df.iloc[:,0]
+ys = df.iloc[:,1]
 
+# Make a scatter plot of xs and ys, using labels to define the colors
+plt.scatter(xs,ys,c=labels,alpha=0.5,s=5)
+
+# Assign the cluster centers: centroids
+centroids = kmeans.cluster_centers_
+
+# Assign the columns of centroids: centroids_x, centroids_y
+centroids_x = centroids[:,0]
+centroids_y = centroids[:,1]
+#
+# Make a scatter plot of centroids_x and centroids_y
+plt.scatter(centroids_x,centroids_y,marker='D',s=25)
+plt.show()
+
+plt.scatter(X[labels == 0, 0], X[labels == 0, 1], s =10, c = 'red', label = 'category 1')
+plt.scatter(X[labels == 1, 0], X[labels == 1, 1], s =10, c = 'blue', label = 'category 2')
+plt.scatter(X[labels == 2, 0], X[labels == 2, 1], s =10, c = 'cyan', label = 'category 3')
+plt.scatter(centroids_x,centroids_y, s = 30, color = 'yellow', label = 'centroid')
+plt.title('clusters of features')
+plt.legend()
+plt.show()

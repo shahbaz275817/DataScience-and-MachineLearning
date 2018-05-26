@@ -13,7 +13,7 @@ df = pd.read_excel('Folds5x2_pp.xlsx')
 print(df.head())
 X = df.iloc[:,:4]
 Y = df.iloc[:,4:]
-
+print(X.shape)
 x_train, x_test, y_train, y_test = train_test_split(X,Y,test_size=0.2,random_state=24)
 #prediction_space = np.linspace(min(x_test), max(x_test))
 
@@ -53,3 +53,10 @@ lasso = Lasso(alpha=0.4,normalize=True)
 lasso.fit(X,Y)
 lasso_coef = lasso.coef_
 print(lasso_coef)
+
+# Backward Elimination
+import statsmodels.formula.api as sm
+X = np.append(arr=np.ones((9568,1)).astype('int'),values = X, axis =1)
+X_opt = X[:,[0,1,2,3,4]]
+regg_OLS = sm.OLS(endog=Y,exog=X_opt).fit()
+print(regg_OLS.summary())
