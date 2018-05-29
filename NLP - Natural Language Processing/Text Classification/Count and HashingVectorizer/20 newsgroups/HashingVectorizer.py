@@ -9,7 +9,7 @@ from sklearn.preprocessing import MaxAbsScaler
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.model_selection import GridSearchCV
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 train = pd.read_csv('train.txt', sep='\t', dtype=str, header=None)
 test = pd.read_csv('test.txt', sep='\t', dtype=str, header=None)

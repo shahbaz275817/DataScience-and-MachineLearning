@@ -68,7 +68,7 @@ print(accuracy_test)
 
 param_grid = {'n_neighbors':np.arange(1, 25)}
 knn = KNeighborsClassifier()
-knn_cv =  GridSearchCV(knn,param_grid,cv=5)
+knn_cv = GridSearchCV(knn,param_grid,cv=5)
 knn_cv.fit(x,y)
 print("KNN best params: {}".format(knn_cv.best_params_))
 print("KNN best score: {}".format(knn_cv.best_score_))

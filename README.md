@@ -12,3 +12,4 @@ Basic machine learning models and datasets
 7. NLP:Natural Language Processing- classification of 20 news groups from news articles (Text Classification)
 8. Deep Learning: Handwriting recognition(Image classification) on  MNIST dataset using Keras
 9. Association Learning: A very simple association learning usage example on a transaction details dataset of a market.
+10. Dimensionality Reduction examples: PCA / LDA / Kernel PCA

@@ -40,7 +40,8 @@ fpr, tpr, threshold = roc_curve(y_test,y_predict_prob)
 
 cv_scores = cross_val_score(logreg,X,Y,cv=5,scoring='roc_auc')
 print("AUC scores computed using 5-fold cross-validation: {}".format(cv_scores))
-
+print("Mean: {}".format(cv_scores.mean()))
+print("Standard Deviation: {}".format(cv_scores.std()))
 
 plt.plot([0, 1], [0, 1], 'k--')
 plt.plot(fpr, tpr)
