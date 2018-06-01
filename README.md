@@ -1,5 +1,5 @@
 # Data Science and Machine Learning
-Basic machine learning models and datasets
+Basic machine learning and deep learning models and datasets
 
 #Projects updated till now
 1. Classification problem using scikit-learn and KNeighbors approach on iris dataset
@@ -14,3 +14,4 @@ Basic machine learning models and datasets
 9. Dimensionality Reduction examples: PCA / LDA / Kernel PCA
 10. Deep Learning: Handwriting recognition(Image classification) on  MNIST dataset using Keras
 11. Artificial Neural Network to predict the behaviour of bank's customers
+12. Convolutional Neural Network to predict different fashion items. (99% accuracy on MNIST digits dataset with this same model)
