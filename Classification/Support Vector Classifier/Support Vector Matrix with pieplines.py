@@ -32,8 +32,7 @@ y_test = np.reshape(y_test,(16282,))
 imp = Imputer(missing_values='NaN',strategy='most_frequent',axis=0)
 # imp.fit(X_test)
 # X_test = imp.transform(X_test)
-# from xgboost import XGBClassifier
-# clf = XGBClassifier()
+from xgboost import XGBClassifier
 clf = SVC()
 
 from sklearn.model_selection import GridSearchCV
