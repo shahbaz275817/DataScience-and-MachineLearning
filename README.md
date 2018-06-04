@@ -16,3 +16,4 @@ Basic machine learning and deep learning models and datasets
 11. Artificial Neural Network to predict the behaviour of bank's customers
 12. Convolutional Neural Network to predict different fashion items. (99% accuracy on MNIST digits dataset with this same model)
 13. Recurrent Neural Network (LSTM) to predict BTC-INR stock prices for the month of April-May 2018
+14. Stacked Auto Encoder (PyTorch): Movies Recommendation System on dataset provided by movieslens 
